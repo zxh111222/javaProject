@@ -18,7 +18,7 @@ public class Student extends Person{
     }
 
     @Override
-    public void studentEat() {
+    public void eat() {
         System.out.println("吃食堂。。。");
     }
 }
