@@ -26,8 +26,9 @@ public class Person {
         this.cardId = cardId;
     }
 
-    public void eat(){
+    public int eat(){
         System.out.println("吃吃吃。。。。。");
+        return 0;
     }
 
 }

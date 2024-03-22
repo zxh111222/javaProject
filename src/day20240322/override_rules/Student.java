@@ -20,5 +20,6 @@ public class Student extends Person{
     @Override
     public int eat() {
         System.out.println("吃食堂。。。");
+        return 0;
     }
 }
