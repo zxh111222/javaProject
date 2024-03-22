@@ -25,4 +25,7 @@ public class Student extends Person{
         System.out.println("456");
         return animal;
     }
+    public Cat cat(Cat cat){
+        return cat;
+    }
 }
