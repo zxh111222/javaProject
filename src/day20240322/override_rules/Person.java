@@ -26,9 +26,13 @@ public class Person {
         this.cardId = cardId;
     }
 
-    public int eat(){
+    public void eat(){
         System.out.println("吃吃吃。。。。。");
-        return 0;
+
+    }
+    public Animal animal(Animal animal){
+        System.out.println("123");
+        return animal;
     }
 
 }
