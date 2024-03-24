@@ -23,4 +23,9 @@ public class Student extends Person {
         System.out.println(people + text);
     }
 
+    //你没资格重写我了
+    public void describeLonely(String text) {
+        System.out.println(text);
+    }
+
 }

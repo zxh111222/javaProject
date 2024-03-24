@@ -14,4 +14,10 @@ public abstract class Person {
 
 
     public abstract void talkAboutLonely(String text);
+
+
+    public final void describeLonely(String text) {
+        System.out.println(text);
+    }
+
 }
