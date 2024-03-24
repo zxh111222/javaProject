@@ -22,6 +22,11 @@ public class Person {
 
 
     public void havePet(Animal animal){
+        //新增需求：如果 animal 是狗，多打印一句：汪汪汪
+        //可以回顾this和super的出现
+        if (animal instanceof Dog) {
+            System.out.println("汪汪汪。。。");
+        }
         System.out.println(this.name + "养了一只" + animal.chineseName);
     }
 
