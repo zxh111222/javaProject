@@ -12,8 +12,8 @@ public class Test {
         person.talkAboutLonely();
         Person person1 = new Teacher("李四");
         person1.talkAboutLonely();
-        Person person2 = new Worker("王五");
-        person2.talkAboutLonely();
+        Student person2 = new Student("zhengxinhao");
+        person2.meTalkAboutLonely();
 
 
     }

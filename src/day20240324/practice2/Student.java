@@ -15,4 +15,8 @@ public class Student extends Person {
         System.out.println("学生--" + this.name + "：好孤独！");
     }
 
+    public void meTalkAboutLonely() {
+        System.out.println("学生--" + this.name + "：每个人有每个人的孤独！");
+    }
+
 }

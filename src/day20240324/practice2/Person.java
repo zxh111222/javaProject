@@ -6,7 +6,6 @@ package day20240324.practice2;
  * @Description: TODO
  */
 public class Person {
-
     public String name;
 
     public Person(String name) {
@@ -14,7 +13,7 @@ public class Person {
     }
 
     public void talkAboutLonely() {
-        System.out.println("每个人都可以描绘孤独");
+        System.out.println("每个人有每个人的孤独");
     }
 
 
