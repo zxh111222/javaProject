@@ -7,16 +7,20 @@ package day20240324.practice2;
  */
 public class Student extends Person {
 
+    public String lonely;
+
+
     public Student(String name) {
         super(name);
     }
 
-    public void talkAboutLonely() {
-        System.out.println("学生--" + this.name + "：好孤独！");
+    @Override
+    public void talkAboutLonely(String text) {
+        System.out.println(text);
     }
 
-    public void meTalkAboutLonely() {
-        System.out.println("学生--" + this.name + "：每个人有每个人的孤独！");
+    public void TalkAboutLonely(String people, String text) {
+        System.out.println(people + text);
     }
 
 }
