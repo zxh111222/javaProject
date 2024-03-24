@@ -29,4 +29,10 @@ public class Person {
         dog.getChineseName();
     }
 
+    //养猪写法可能好点
+    public void havePet(Pig pig){
+        System.out.print(this.name + "养了一只" + pig.chineseName);
+    }
+
+
 }
