@@ -7,9 +7,8 @@ package day20240324.practice;
  */
 public class Cat extends Animal{
 
-    public String chineseName = "猫";
-    public void getChineseName(){
-        System.out.println(chineseName);
-    }
 
+    public Cat(String chineseName) {
+        super(chineseName);
+    }
 }

@@ -20,19 +20,21 @@ public class Person {
         this.name = name;
     }
 
-    public void havePet(Cat cat){
-        System.out.print(this.name + "养了一只");
-        cat.getChineseName();
-    }
-    public void havePet(Dog dog){
-        System.out.print(this.name + "养了一只");
-        dog.getChineseName();
+
+    public void havePet(Animal animal){
+        System.out.println(this.name + "养了一只" + animal.chineseName);
     }
 
-    //养猪写法可能好点
-    public void havePet(Pig pig){
-        System.out.print(this.name + "养了一只" + pig.chineseName);
-    }
+//    public void havePet(Cat cat){
+//        System.out.print(this.name + "养了一只" + cat.chineseName);
+//    }
+//    public void havePet(Dog dog){
+//        System.out.print(this.name + "养了一只" + dog.chineseName);
+//    }
+//
+//    public void havePet(Pig pig){
+//        System.out.print(this.name + "养了一只" + pig.chineseName);
+//    }
 
 
 }

@@ -7,14 +7,8 @@ package day20240324.practice;
  */
 public class Pig extends Animal{
 
-    public String chineseName = "猪";
 
-
-    public String getChineseName() {
-        return chineseName;
-    }
-
-    public void setChineseName(String chineseName) {
-        this.chineseName = chineseName;
+    public Pig(String chineseName) {
+        super(chineseName);
     }
 }

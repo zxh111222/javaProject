@@ -9,6 +9,17 @@ public class Animal {
 
     public String chineseName;
 
+    public Animal(String chineseName) {
+        this.chineseName = chineseName;
+    }
+
+    public String getChineseName() {
+        return chineseName;
+    }
+
+    public void setChineseName(String chineseName) {
+        this.chineseName = chineseName;
+    }
 
 
 }
