@@ -5,7 +5,7 @@ package day20240508.abstract_demo;
  * @CreateTime: 2024-03-24  09:14
  * @Description: TODO
  */
-public class Animal {
+public abstract class Animal {
 
     public String chineseName;
 
