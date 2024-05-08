@@ -5,9 +5,10 @@
 ## OOAD  面向对象的分析和设计  
 
 ## Practice：一个人养了一只 Pet
+
 ![practice1.png](img%2Fpractice1.png)
 
-## 多态的前提:  
+## 多态的前提:
 
 ![img_1.png](img%2Fimg_1.png)
 
