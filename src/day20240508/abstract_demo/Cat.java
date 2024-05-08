@@ -16,9 +16,9 @@ public class Cat extends Animal {
     public void newAbstractMethod(String text) {
 
     }
-
-    public void newFinalMethod(){
-        System.out.println("2222222222222222222");
-    }
+//
+//    public void newFinalMethod(){
+//        System.out.println("2222222222222222222");
+//    }
 
 }
