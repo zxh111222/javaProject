@@ -11,4 +11,9 @@ public class Dog extends Animal {
     public Dog(String chineseName) {
         super(chineseName);
     }
+
+    @Override
+    public void newAbstractMethod(String text) {
+
+    }
 }

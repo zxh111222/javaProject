@@ -10,4 +10,9 @@ public class Pig extends Animal {
     public Pig(String chineseName) {
         super(chineseName);
     }
+
+    @Override
+    public void newAbstractMethod(String text) {
+
+    }
 }

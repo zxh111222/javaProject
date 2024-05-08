@@ -11,4 +11,10 @@ public class Cat extends Animal {
     public Cat(String chineseName) {
         super(chineseName);
     }
+
+    @Override
+    public void newAbstractMethod(String text) {
+
+    }
+
 }
