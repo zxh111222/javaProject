@@ -21,6 +21,6 @@ public class Animal {
         this.chineseName = chineseName;
     }
 
-    public void newAbstractMethod(String text);
+    public abstract void newAbstractMethod(String text);
 
 }
