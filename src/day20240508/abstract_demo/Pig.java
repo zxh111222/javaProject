@@ -5,10 +5,15 @@ package day20240508.abstract_demo;
  * @CreateTime: 2024-03-24  10:10
  * @Description: TODO
  */
-public abstract class Pig extends Animal {
+public class Pig extends Animal {
 
     public Pig(String chineseName) {
         super(chineseName);
+    }
+
+    @Override
+    public void newAbstractMethod(String text) {
+
     }
 
 }

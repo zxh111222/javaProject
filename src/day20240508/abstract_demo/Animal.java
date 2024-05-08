@@ -23,4 +23,8 @@ public abstract class Animal {
 
     public abstract void newAbstractMethod(String text);
 
+    public final void newFinalMethod(){
+        System.out.println("1111111111111111");
+    }
+
 }
