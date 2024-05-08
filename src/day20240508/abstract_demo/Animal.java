@@ -21,8 +21,6 @@ public class Animal {
         this.chineseName = chineseName;
     }
 
-    public void newAbstractMethod(String text){
-        System.out.println("这是Animal类中的一个新方法");
-    }
+    public void newAbstractMethod(String text);
 
 }
