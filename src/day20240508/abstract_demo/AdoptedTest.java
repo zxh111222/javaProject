@@ -14,8 +14,8 @@ public class AdoptedTest {
         Dog dog = new Dog("狗");
         person2.havePet(dog);
         Person person3 = new Person("王五");
-        Pig pig= new Pig("猪");
-        person3.havePet(pig);
+//        Pig pig= new Pig("猪");
+//        person3.havePet(pig);
     }
 
 
