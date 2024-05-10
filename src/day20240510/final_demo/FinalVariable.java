@@ -4,7 +4,7 @@ public class FinalVariable {
 
 
     // Instance Variables(Non-Static Fileds)
-    public String myName = "zxh";
+    public final String myName = "zxh";
 
     // Class Variables(Static Fileds)
     public static String id = "123456789";
@@ -12,6 +12,7 @@ public class FinalVariable {
     // Local Variables
     public void method1() {
         int number = 100;
+        number = 500;
         System.out.println(number);
     }
 
