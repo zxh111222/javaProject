@@ -7,11 +7,11 @@ public class FinalVariable {
     public String myName = "zxh";
 
     // Class Variables(Static Fileds)
-    public final static String id = "123456789";
+    public static String id = "123456789";
 
     // Local Variables
     public void method1() {
-        int number = 100;
+        final int number = 100;
         number = 500;
         System.out.println(number);
     }
