@@ -11,13 +11,13 @@ public class FinalVariable {
 
     // Local Variables
     public void method1() {
-        final int number = 100;
+        int number = 100;
         number = 500;
         System.out.println(number);
     }
 
     //Parameters
-    public void method2(int number) {
+    public void method2(final int number) {
         number = 200;
         System.out.println(number);
     }
