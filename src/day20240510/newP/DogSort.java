@@ -1,13 +1,7 @@
 package day20240510.newP;
 
 public class DogSort extends EntitySort{
-    @Override
-    public void print(Entity[] arr) {
-        for (Entity entity : arr) {
-            System.out.print(entity + " ");
-        }
-        System.out.println();
-    }
+
 
     @Override
     public void startSort(Entity[] arr) {
