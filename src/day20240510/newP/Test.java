@@ -1,20 +1,36 @@
 package day20240510.newP;
 
-public class Test {
-    public static void main(String[] args) {
-        int[] arr = new int[] {4, 2, 7, 1, 9, 5, 3, 8, 6};
-        // 需求：支持排序 int[]
-        MySortUtil.sort(arr);
-        MySortUtil.print(arr);
+import day20240510.p.Student;
 
-        // 新需求：支持排序 Student[]
+public class Test {
+    /**
+     * 以终为始
+     */
+    public static void main(String[] args) {
+
         int size = 5;
+        //创建学生对象数组
         Student[] studentArr = new Student[size];
-        for (int i = 0; i < size; i++) {
-            studentArr[i] = new Student("编号-" + i, 23 - i);
-        }
-        MySortUtil.print(studentArr);
-        MySortUtil.sort(studentArr);
-        MySortUtil.print(studentArr);
+        studentArr[0] = new Student("zxh", 22);
+        studentArr[1] = new Student("zcy", 23);
+        studentArr[2] = new Student("zzj", 24);
+        studentArr[3] = new Student("ys", 21);
+        studentArr[4] = new Student("yqh", 25);
+        //创建狗狗对象数组
+        Dog[] dogArr = new Dog[size];
+        dogArr[0] = new Dog("圆圆", 32);
+        dogArr[1] = new Dog("球球", 6);
+        dogArr[2] = new Dog("小黑", 30);
+        dogArr[3] = new Dog("大黄", 14);
+        dogArr[4] = new Dog("二哈", 22);
+
+
+
+
+
+        MySortUtil.sort();
+
+
+
     }
 }

@@ -1,8 +1,9 @@
 package day20240510.newP;
 
-public class Student {
-    String name;
-    int age;
+public class Student extends Entity {
+    public String name;
+    public int age;
+
 
     public Student(String name, int age) {
         this.name = name;
@@ -11,6 +12,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return this.name + "(" + this.age + ")";
+        return "学生：" + this.name + "，年龄：" + this.age + "岁";
     }
 }
