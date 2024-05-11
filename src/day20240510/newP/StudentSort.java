@@ -17,7 +17,7 @@ public class StudentSort extends EntitySort {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
             for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (arr[j].age > arr[j+1].age) {
+                if (((Student) arr[j]).age > ((Student) arr[j+1]).age) {
                     Entity temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;

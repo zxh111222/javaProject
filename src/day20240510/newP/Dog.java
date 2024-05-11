@@ -2,7 +2,7 @@ package day20240510.newP;
 
 public class Dog extends Entity {
     public String name;
-    int weight;
+    public int weight;
 
     public Dog(String name, int weight) {
         this.name = name;
