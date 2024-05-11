@@ -23,7 +23,10 @@ public class Test {
         dogArr[4] = new Dog("二哈", 22);
 
         MySortUtil.sort(new StudentSort(), studentArr);
-//        MySortUtil.sort(new DogSort(), dogArr);
+
+        System.out.println("====================");
+
+        MySortUtil.sort(new DogSort(), dogArr);
 
 
 

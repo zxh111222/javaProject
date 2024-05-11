@@ -1,9 +1,6 @@
 package day20240510.newP;
 
-
-
-public class StudentSort extends EntitySort {
-
+public class DogSort extends EntitySort{
     @Override
     public void print(Entity[] arr) {
         for (Entity entity : arr) {
@@ -17,7 +14,7 @@ public class StudentSort extends EntitySort {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
             for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (((Student) arr[j]).age > ((Student) arr[j+1]).age) {
+                if (((Dog) arr[j]).weight > ((Dog) arr[j+1]).weight) {
                     Entity temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;

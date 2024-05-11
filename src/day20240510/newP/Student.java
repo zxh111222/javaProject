@@ -11,6 +11,6 @@ public class Student extends Entity {
 
     @Override
     public String toString() {
-        return "学生：" + this.name + "，年龄：" + this.age + "岁";
+        return "学生：" + this.name + "，年龄：" + this.age + "岁\t";
     }
 }
