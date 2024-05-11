@@ -17,7 +17,7 @@ public class FinalVariable {
     }
 
     //Parameters
-    public void method2(final int number) {
+    public void method2(int number) {
         number = 200;
         System.out.println(number);
     }
