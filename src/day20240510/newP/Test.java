@@ -3,6 +3,10 @@ package day20240510.newP;
 public class Test {
     /**
      * 以终为始
+     * 不用修改MySortUtil
+     * 需要其他类型时,如新类型xxx，加上xxx.java继承于Entity
+     * 同时写xxxSort.java继承于EntitySort
+     * 最后在这里添加即可
      */
     public static void main(String[] args) {
 
@@ -27,6 +31,9 @@ public class Test {
         System.out.println("====================");
 
         MySortUtil.sort(new DogSort(), dogArr);
+
+        System.out.println("====================");
+
 
 
 
