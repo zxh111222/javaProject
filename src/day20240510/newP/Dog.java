@@ -11,6 +11,6 @@ public class Dog extends Entity {
 
     @Override
     public String toString() {
-        return "小狗名字：" + this.name + "，体重：" + this.weight + "kg";
+        return "小狗名字：" + this.name + "，体重：" + this.weight + "kg\t";
     }
 }
