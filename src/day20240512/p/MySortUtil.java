@@ -42,29 +42,12 @@ public class MySortUtil {
     }
 
 
-    public static void sort(Student[] arr) {
+    public static void sort(Entity[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
             for (int j = 0; j < (arr.length - 1) - i; j++) {
                 if (arr[j].age > arr[j+1].age) {
-                    Student temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                    swapped = true;
-                }
-            }
-            if (!swapped) {
-                break;
-            }
-        }
-    }
-
-     public static void sort(Dog[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            boolean swapped = false;
-            for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (arr[j].weight > arr[j+1].weight) {
-                    Dog temp = arr[j];
+                    Entity temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
                     swapped = true;

@@ -1,6 +1,6 @@
 package day20240512.p;
 
-public class Student {
+public class Student extends Entity{
     String name;
     public int age;
 

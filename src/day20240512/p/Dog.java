@@ -1,6 +1,6 @@
 package day20240512.p;
 
-public class Dog {
+public class Dog extends Entity{
     String name;
     double weight;
 
