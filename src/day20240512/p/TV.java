@@ -7,6 +7,7 @@ public class TV extends Entity{
     public TV(String name, double price) {
         this.name = name;
         this.price = price;
+        this.xxx = this.price;
     }
 
     @Override
