@@ -18,4 +18,5 @@ public class TV extends Entity{
     public double toNumber() {
         return this.price;
     }
+
 }
