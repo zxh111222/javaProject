@@ -9,14 +9,7 @@ public class MySortUtil {
         System.out.println();
     }
 
-        public static void print(Student[] arr){
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
-    }
-
-    public static void print(Dog[] arr) {
+        public static void print(Entity[] arr){
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
