@@ -6,7 +6,7 @@ public class Test {
         MySortUtil.sort(arr);
         MySortUtil.print(arr);
 
-        int size = 4;
+        int size = 5;
         Student[] studentArr = new Student[size];
         for (int i = 0; i < size; i++) {
             studentArr[i] = new Student("编号-" + i, 23 - i);

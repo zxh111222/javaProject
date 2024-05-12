@@ -7,6 +7,7 @@ public class Student extends Entity{
     public Student(String name, int age) {
         this.name = name;
         this.age = age;
+        this.xxx = this.age;
     }
 
     @Override

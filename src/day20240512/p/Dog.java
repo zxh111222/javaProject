@@ -7,6 +7,7 @@ public class Dog extends Entity{
     public Dog(String name, double weight) {
         this.name = name;
         this.weight = weight;
+        this.xxx = this.weight;
     }
 
     @Override
