@@ -27,6 +27,13 @@ public class Test {
         MySortUtil.print(dogArr);
 
         // 支持排序 TV[]（按价格 price）
+        TV[] tvArr = new TV[size];
+        for (int i = 0; i < size; i++) {
+            tvArr[i] = new TV("tv-" + i, 1999.99 - i);
+        }
+        MySortUtil.print(tvArr);
+        MySortUtil.sort(tvArr);
+        MySortUtil.print(tvArr);
         // 支持排序 Room[]（按面积 area）
         // 以及任何其他类型...
         // 目标：让 MySortUtil 代码足够`稳定`，同时`可扩展`
