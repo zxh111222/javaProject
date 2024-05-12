@@ -1,6 +1,6 @@
 package day20240512.p;
 
-public class Student extends Entity{
+public class Student extends MyComparable {
     String name;
     public int age;
 

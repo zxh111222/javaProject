@@ -1,6 +1,6 @@
 package day20240512.p;
 
-public class Dog extends Entity{
+public class Dog extends MyComparable {
     String name;
     double weight;
 

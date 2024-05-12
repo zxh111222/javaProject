@@ -1,6 +1,6 @@
 package day20240512.p;
 
-public class TV extends Entity{
+public class TV extends MyComparable {
     String name;
     double price;
 
