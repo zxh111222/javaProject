@@ -39,7 +39,7 @@ public class MySortUtil {
         for (int i = 0; i < arr.length - 1; i++) {
             boolean swapped = false;
             for (int j = 0; j < (arr.length - 1) - i; j++) {
-                if (arr[j].xxx > arr[j+1].xxx) {
+                if (arr[j].toNumber() > arr[j+1].toNumber()) {
                     Entity temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;

@@ -7,11 +7,15 @@ public class Dog extends Entity{
     public Dog(String name, double weight) {
         this.name = name;
         this.weight = weight;
-        this.xxx = this.weight;
     }
 
     @Override
     public String toString() {
         return "小狗名字：" + this.name + "，体重：" + this.weight + "kg\t";
+    }
+
+        @Override
+    public double toNumber() {
+        return this.weight;
     }
 }

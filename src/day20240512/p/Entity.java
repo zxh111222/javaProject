@@ -1,6 +1,7 @@
 package day20240512.p;
 
-public class Entity {
-    double xxx;
+public abstract class Entity {
+
+    public abstract double toNumber();
 
 }

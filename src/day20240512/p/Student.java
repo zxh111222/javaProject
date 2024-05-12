@@ -7,11 +7,15 @@ public class Student extends Entity{
     public Student(String name, int age) {
         this.name = name;
         this.age = age;
-        this.xxx = this.age;
     }
 
     @Override
     public String toString() {
         return this.name + "(" + this.age + ")";
+    }
+
+        @Override
+    public double toNumber() {
+        return this.age;
     }
 }
