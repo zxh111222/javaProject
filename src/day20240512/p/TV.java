@@ -15,8 +15,15 @@ public class TV extends MyComparable {
     }
 
     @Override
-    public double toNumber() {
-        return this.price;
+    public int compareTo(MyComparable other) {
+        TV o = (TV) other;
+        if (this.price == o.price) {
+            return 0;
+        } else if (this.price > o.price) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
 }

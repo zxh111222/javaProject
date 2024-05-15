@@ -14,8 +14,15 @@ public class Student extends MyComparable {
         return this.name + "(" + this.age + ")";
     }
 
-        @Override
-    public double toNumber() {
-        return this.age;
+    @Override
+    public int compareTo(MyComparable other) {
+        Student o = (Student) other;
+        if (this.age == o.age) {
+            return 0;
+        } else if (this.age > o.age) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }
