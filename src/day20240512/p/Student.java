@@ -1,6 +1,6 @@
 package day20240512.p;
 
-public class Student extends MyComparable {
+public class Student implements MyComparable {
     String name;
     public int age;
 
