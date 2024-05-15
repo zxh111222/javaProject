@@ -2,7 +2,7 @@ package day20240515.p;
 
 public class Test {
     public static void main(String[] args) {
-        int[] arr = new int[] {4, 2, 7, 1, 9, 5, 3, 8, 6};
+        /*int[] arr = new int[] {4, 2, 7, 1, 9, 5, 3, 8, 6};
         MySortUtil.sort(arr);
         MySortUtil.print(arr);
 
@@ -38,6 +38,6 @@ public class Test {
         // 以及任何其他类型...
         // 目标：让 MySortUtil 代码足够`稳定`，同时`可扩展`
 
-
+*/
     }
 }

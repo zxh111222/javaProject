@@ -3,10 +3,12 @@ package day20240515.p;
 public class Student implements MyComparable {
     String name;
     public int age;
+    public char firstLetter;
 
-    public Student(String name, int age) {
+    public Student(String name, char firstLetter, int age) {
         this.name = name;
         this.age = age;
+        this.firstLetter = firstLetter;
     }
 
     @Override
@@ -17,9 +19,9 @@ public class Student implements MyComparable {
     @Override
     public int compareTo(MyComparable other) {
         Student o = (Student) other;
-        if (this.age == o.age) {
+        if ((int)this.firstLetter == (int)o.firstLetter) {
             return 0;
-        } else if (this.age > o.age) {
+        } else if ((int)this.firstLetter > (int)o.firstLetter) {
             return 1;
         } else {
             return -1;
