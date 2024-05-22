@@ -1,6 +1,6 @@
 package day20240515.p;
 
-public class Student implements MyComparable {
+public class Student {
     String name;
     public int age;
     public char firstLetter;
@@ -16,15 +16,5 @@ public class Student implements MyComparable {
         return this.name + "(" + this.age + ")";
     }
 
-    @Override
-    public int compareTo(MyComparable other) {
-        Student o = (Student) other;
-        if ((int)this.firstLetter == (int)o.firstLetter) {
-            return 0;
-        } else if ((int)this.firstLetter > (int)o.firstLetter) {
-            return 1;
-        } else {
-            return -1;
-        }
-    }
+
 }
