@@ -8,6 +8,7 @@ public class Test {
         b.set("实训室3", "3台风扇");
         b.get("实训室3");
 
+        Entity c = new Entity("实训室1", new Student[]{new Student("学生1"), new Student("学生2")});
 
 
 

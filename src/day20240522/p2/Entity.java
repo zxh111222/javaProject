@@ -7,6 +7,10 @@ public class Entity {
     public Entity() {
     }
 
+    public Entity(String classRoom, Student[] Student) {
+        this.classRoom = classRoom;
+    }
+
     public Entity(String classRoom, String fan) {
         this.classRoom = classRoom;
         this.fan = fan;
