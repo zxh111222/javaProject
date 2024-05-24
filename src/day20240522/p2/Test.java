@@ -17,6 +17,11 @@ public class Test {
         c.set("实训9",new Student[]{new Student("a"),new Student("b")});
         System.out.println(Arrays.toString(c.get("实训9")));
 
+        System.out.println("=== === ===");
+
+        MyMap<String, Integer> d = new MyMap<>("实训室2", 2);
+        System.out.println(d.get("实训室2"));
+
 
     }
 }
