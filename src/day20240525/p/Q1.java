@@ -16,7 +16,7 @@ public class Q1 {
 
         System.out.println("=== === ===");
 
-        String s5 = "Java";
+        final String s5 = "Java";
         String s6 = "Cool";
         String s7 = "JavaCool";
         String s8 = "Java" + "Cool";
