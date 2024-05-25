@@ -1,5 +1,7 @@
 package day20240525.p;
 
+
+@SuppressWarnings({"all"})
 public class Q1 {
     public static void main(String[] args) {
         String s1 = new String("xyz");
