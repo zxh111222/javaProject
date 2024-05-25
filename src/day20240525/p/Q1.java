@@ -34,6 +34,10 @@ public class Q1 {
 
         System.out.println("=== === ===");
 
+        String s12 = s9.intern();
+        System.out.println(s7 == s12);
+
+        System.out.println("=== === ===");
 
 
     }
