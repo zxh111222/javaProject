@@ -4,6 +4,10 @@ import day20240508.practice.Algorithm;
 
 public abstract class SubAlgorithm extends Algorithm {
 
+    int count;
 
+    public SubAlgorithm(int count) {
+        this.count = count;
+    }
 
 }

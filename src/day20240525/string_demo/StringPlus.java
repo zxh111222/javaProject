@@ -2,11 +2,10 @@ package day20240525.string_demo;
 
 import day20240508.practice.Algorithm;
 
-public class StringPlus extends Algorithm {
-    int count;
+public class StringPlus extends SubAlgorithm {
 
     public StringPlus(int count) {
-        this.count = count;
+        super(count);
     }
 
     @Override

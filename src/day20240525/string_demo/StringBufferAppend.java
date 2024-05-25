@@ -2,11 +2,11 @@ package day20240525.string_demo;
 
 import day20240508.practice.Algorithm;
 
-public class StringBufferAppend extends Algorithm {
+public class StringBufferAppend extends SubAlgorithm {
     int count;
 
     public StringBufferAppend(int count) {
-        this.count = count;
+        super(count);
     }
 
 
