@@ -24,13 +24,13 @@ public class Q1 {
         String s10 = "Java" + s6;
         String s11 = s9+ s10;
 
-        System.out.println(s7 == s8);     //true
-        System.out.println(s7 == s9);     //false
-        System.out.println(s7 == s10);    //false
-        System.out.println(s7 == s11);    //false
-        System.out.println(s8 == s9);     //false
-        System.out.println(s9 == s10);    //false
-        System.out.println(s10 == s11);   //false
+        System.out.println(s7 == s8);
+        System.out.println(s7 == s9);
+        System.out.println(s7 == s10);
+        System.out.println(s7 == s11);
+        System.out.println(s8 == s9);
+        System.out.println(s9 == s10);
+        System.out.println(s10 == s11);
 
         System.out.println("=== === ===");
 
