@@ -1,7 +1,7 @@
 package day20240525.string_demo;
 
 
-public class MyStringBuilder {
+public class MyStringBuilder extends AbstractMyStringBuilder {
 
     char[] value;
 
