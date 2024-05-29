@@ -12,6 +12,5 @@ public class StringCommonMethod4 {
             s3 = s3.replaceAll(words[i], "**");
         }
         System.out.println(s3);
-
     }
 }
