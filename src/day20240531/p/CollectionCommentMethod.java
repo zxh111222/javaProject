@@ -2,6 +2,7 @@ package day20240531.p;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 @SuppressWarnings({"all"})
 public class CollectionCommentMethod {
@@ -46,6 +47,14 @@ public class CollectionCommentMethod {
             for (String xxx : arrayList) {
                 System.out.println(xxx);
             }
+
+            System.out.println("--------------------");
+
+            Iterator<String> iterator = arrayList.iterator();
+            while (iterator.hasNext()) {
+                System.out.println(iterator.next());
+            }
+
         }
 
     }
