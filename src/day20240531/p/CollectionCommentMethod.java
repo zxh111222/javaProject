@@ -27,7 +27,7 @@ public class CollectionCommentMethod {
 //            ArrayList<String> arrayList = (ArrayList<String>) al;
 //        }
 
-        if (al instanceof ArrayList arrayList) {
+        if (al instanceof ArrayList<String> arrayList) {
             // 以 Collection 视角来看，没有 get 方法
             // 以 ArrayListt 视角来看，有 get方法，方便访问元素
             // 通过阅读源码，发现，其实以 List 视角就已经有 get 方法
@@ -40,7 +40,12 @@ public class CollectionCommentMethod {
             for (int i = 0; i < arrayList.size(); i++) {
                 System.out.println(arrayList.get(i));
             }
-            
+
+            System.out.println("--------------------");
+
+            for (String xxx : arrayList) {
+                System.out.println(xxx);
+            }
         }
 
     }
