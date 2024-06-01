@@ -19,10 +19,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", hometown='" + hometown + '\'' +
-                '}';
+        return "姓名: " + name + ", 年龄: " + age + ", 家乡: " + hometown;
     }
 }
