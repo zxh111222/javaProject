@@ -116,5 +116,13 @@ public class StudentManagementSystem {
      * @version 1.0
      */
     private static void showStudentsList() {
+        if (students.isEmpty()) {
+            System.out.println("还未录入学生信息!");
+        } else {
+            for (Student student : students) {
+                System.out.println(student);
+            }
+        }
+        System.out.println("==================================================\n\n");
     }
 }
