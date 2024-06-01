@@ -46,6 +46,74 @@ public class StudentManagementSystem {
                 break;
             }
 
+            switch (choice) {
+                case "1":
+                    showStudentsList();
+                    break;
+                case "2":
+                    addStudent();
+                    break;
+                case "3":
+                    deleteStudent();
+                    break;
+                case "4":
+                    updateStudent();
+                    break;
+                case "5":
+                    findStudent();
+                    break;
+                default:
+                    System.out.println("--- 您的输入有误，请重新输入! ---");
+            }
+
         }
+    }
+
+
+    /**
+     * @description: 查找指定学生信息(根据姓名)
+     * @author XinhaoZheng
+     * @date 2024/6/1 15:44
+     * @version 1.0
+     */
+    private static void findStudent() {
+    }
+
+
+    /**
+     * @description: 更改指定学生信息(根据姓名)
+     * @author XinhaoZheng
+     * @date 2024/6/1 15:44
+     * @version 1.0
+     */
+    private static void updateStudent() {
+    }
+
+
+    /**
+     * @description: 删除指定学生(根据姓名)
+     * @author XinhaoZheng
+     * @date 2024/6/1 15:43
+     * @version 1.0
+     */
+    private static void deleteStudent() {
+    }
+
+    /**
+     * @description: 增加学生
+     * @author XinhaoZheng
+     * @date 2024/6/1 15:43
+     * @version 1.0
+     */
+    private static void addStudent() {
+    }
+
+    /**
+     * @description: 列出所有学生信息
+     * @author XinhaoZheng
+     * @date 2024/6/1 15:41
+     * @version 1.0
+     */
+    private static void showStudentsList() {
     }
 }
