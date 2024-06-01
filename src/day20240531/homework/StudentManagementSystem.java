@@ -78,6 +78,18 @@ public class StudentManagementSystem {
      * @version 1.0
      */
     private static void findStudent() {
+        System.out.println("请输入要查找的学生姓名:");
+        String name = scanner.nextLine();
+
+        for (Student student : students) {
+            if (student.name.equals(name)) {
+                System.out.println(student);
+                System.out.println("==================================================\n\n");
+                return;
+            }
+        }
+        System.out.println("未找到该学生!");
+        System.out.println("==================================================\n\n");
     }
 
 
