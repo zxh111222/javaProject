@@ -7,6 +7,7 @@ package day20240531.homework;
  * @date 2024/6/1 14:59
  */
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -24,7 +25,7 @@ import java.util.Scanner;
  */
 
 public class StudentManagementSystem {
-
+    private static ArrayList<Student> students = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
