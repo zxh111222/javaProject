@@ -7,6 +7,8 @@ package day20240531.homework;
  * @date 2024/6/1 14:59
  */
 
+import java.util.Scanner;
+
 /**
  * 基于命令行的学生管理系统需求:
  * 1. 列出所有学生信息
@@ -23,7 +25,27 @@ package day20240531.homework;
 
 public class StudentManagementSystem {
 
-    public static void main(String[] args) {
+    private static Scanner scanner = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("==================  学生管理系统  ==================");
+            System.out.println("\t请输入操作编号或输入 q/quit 退出系统:");
+            System.out.println("\t1. 列出所有学生信息");
+            System.out.println("\t2. 增加学生");
+            System.out.println("\t3. 删除指定学生");
+            System.out.println("\t4. 更改指定学生信息");
+            System.out.println("\t5. 查找指定学生信息");
+            System.out.println("==================================================");
+
+            System.out.println("请输入您的操作:");
+            String choice = scanner.nextLine();
+
+            if (choice.equalsIgnoreCase("q") || choice.equals("quit")) {
+                System.out.println("退出系统!");
+                break;
+            }
+
+        }
     }
 }
