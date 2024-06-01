@@ -98,6 +98,19 @@ public class StudentManagementSystem {
      * @version 1.0
      */
     private static void deleteStudent() {
+        System.out.println("请输入要删除学生的姓名:");
+        String name = scanner.nextLine();
+
+        for (Student student : students) {
+            if (student.name.equals(name)) {
+                students.remove(student);
+                System.out.println("已删除该学生的信息!");
+                System.out.println("==================================================\n\n");
+                return;
+            }
+        }
+        System.out.println("未找到该学生!");
+        System.out.println("==================================================\n\n");
     }
 
     /**
