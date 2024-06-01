@@ -107,6 +107,17 @@ public class StudentManagementSystem {
      * @version 1.0
      */
     private static void addStudent() {
+        System.out.println("请输入要添加学生的姓名:");
+        String name = scanner.nextLine();
+        System.out.println("请输入该学生的年龄:");
+        int age = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("请输入该学生的家乡:");
+        String hometown = scanner.nextLine();
+
+        students.add(new Student(name, age, hometown));
+        System.out.println("添加成功!");
+        System.out.println("==================================================\n\n");
     }
 
     /**
