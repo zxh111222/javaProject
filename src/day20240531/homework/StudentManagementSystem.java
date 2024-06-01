@@ -22,4 +22,8 @@ package day20240531.homework;
  */
 
 public class StudentManagementSystem {
+
+    public static void main(String[] args) {
+
+    }
 }
