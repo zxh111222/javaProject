@@ -49,6 +49,8 @@ class CustomObj {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         CustomObj customObj = (CustomObj) o;
         return value == customObj.value && Objects.equals(name, customObj.name);
     }
