@@ -1,6 +1,7 @@
 package day20240531.p;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CollectionCommentMethod3 {
     public static void main(String[] args) {
@@ -29,4 +30,11 @@ class Student {
         this.name = name;
         this.age = age;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        Student student = (Student) o;
+        return age == student.age && Objects.equals(name, student.name);
+    }
+
 }
