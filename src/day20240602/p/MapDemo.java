@@ -22,6 +22,9 @@ public class MapDemo {
         System.out.println(group);
         System.out.println(group.toString());
 
+        //根据 key 获取 value
+        System.out.println(group.get("第一组"));
+
         System.out.println("=== === ===");
 
         for (Map.Entry<String, Integer> entry : group.entrySet()) {

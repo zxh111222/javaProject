@@ -14,10 +14,11 @@ public class MapDemo2 {
     public static void main(String[] args) {
         Map<String, String> map1 = new HashMap<>();
         map1.put("k1", null);
+        map1.put("k1", "1");
+        map1.put("k1", "2");
         map1.put(null, "v1");
         System.out.println(map1);
-
-
+        System.out.println(map1.get("k1"));
 
 
         // Hashtable 典型的官方命名就不规范的例子 Since: 1.0
