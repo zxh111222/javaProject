@@ -7,6 +7,7 @@ package day20240602.homework;
  * @date 2024/6/1 14:59
  */
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -25,10 +26,18 @@ import java.util.Scanner;
  */
 
 public class StudentManagementSystem {
-    private static ArrayList<Student> students = new ArrayList<>();
+    private static ArrayList<Student> students;
     private static Scanner scanner = new Scanner(System.in);
+    private static final String FILE_NAME = "students.properties";
 
     public static void main(String[] args) {
+
+        try{
+            students = loadStudents(FILE_NAME);
+        } catch (IOException e) {
+            students = new ArrayList<>();
+        }
+
         while (true) {
             System.out.println("==================  学生管理系统  ==================");
             System.out.println("\t请输入操作编号或输入 q/quit 退出系统:");
@@ -43,6 +52,7 @@ public class StudentManagementSystem {
             String choice = scanner.nextLine();
 
             if (choice.equalsIgnoreCase("q") || choice.equals("quit")) {
+                saveInfo();
                 System.out.println("退出系统!");
                 break;
             }
