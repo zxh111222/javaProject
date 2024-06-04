@@ -1,9 +1,6 @@
 package day20240602.p;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 /**
@@ -23,5 +20,8 @@ public class PropertiesDemo {
         System.out.println(properties);
         System.out.println(properties.getProperty("username"));
 
+        // 对 properties 做一些更新
+        properties.setProperty("username", "admin-xxx");
+        properties.store(new FileOutputStream(file), properties.toString());
     }
 }
