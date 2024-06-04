@@ -82,6 +82,28 @@ public class StudentManagementSystem {
 
 
     /**
+     * @description: 退出时保存信息到文件中
+     * @author XinhaoZheng
+     * @date 2024/6/4 10:39
+     * @version 1.0
+     */
+    private static void saveInfo() {
+
+    }
+
+
+    /**
+     * @description: 程序启动时读取文件信息
+     * @author XinhaoZheng
+     * @date 2024/6/4 10:39
+     * @version 1.0
+     */
+    private static ArrayList<Student> loadStudents(String fileName) {
+        return null;
+    }
+
+
+    /**
      * @description: 查找指定学生信息(根据姓名)
      * @author XinhaoZheng
      * @date 2024/6/1 15:44
