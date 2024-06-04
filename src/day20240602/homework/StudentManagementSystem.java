@@ -7,8 +7,9 @@ package day20240602.homework;
  * @date 2024/6/1 14:59
  */
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.Scanner;
 
 /**
@@ -26,17 +27,15 @@ import java.util.Scanner;
  */
 
 public class StudentManagementSystem {
-    private static ArrayList<Student> students;
+    private static ArrayList<Student> students = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
-    private static final String FILE_NAME = "students.properties";
+    private static Properties properties = new Properties();
+    private static final String FILE_NAME = "src/day20240602/homework/students.properties";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        try{
-            students = loadStudents(FILE_NAME);
-        } catch (IOException e) {
-            students = new ArrayList<>();
-        }
+
+        students = loadStudents(FILE_NAME);
 
         while (true) {
             System.out.println("==================  学生管理系统  ==================");
@@ -52,7 +51,7 @@ public class StudentManagementSystem {
             String choice = scanner.nextLine();
 
             if (choice.equalsIgnoreCase("q") || choice.equals("quit")) {
-                saveInfo();
+                saveInfo(students);
                 System.out.println("退出系统!");
                 break;
             }
@@ -87,8 +86,14 @@ public class StudentManagementSystem {
      * @date 2024/6/4 10:39
      * @version 1.0
      */
-    private static void saveInfo() {
-
+    private static void saveInfo(ArrayList<Student> students) throws IOException {
+        Properties properties = new Properties();
+        for (Student student : students) {
+            properties.setProperty(student.getName() + ".name", student.getName());
+            properties.setProperty(student.getName() + ".age", String.valueOf(student.getAge()));
+            properties.setProperty(student.getName() + ".hometown",student.getHometown());
+        }
+        properties.store(new FileOutputStream(FILE_NAME), properties.toString());
     }
 
 
@@ -98,8 +103,25 @@ public class StudentManagementSystem {
      * @date 2024/6/4 10:39
      * @version 1.0
      */
-    private static ArrayList<Student> loadStudents(String fileName) {
-        return null;
+    private static ArrayList<Student> loadStudents(String fileName) throws IOException {
+        File file= new File(FILE_NAME);
+        if (!file.exists()) {
+            return students;
+        }
+
+
+        properties.load(new FileInputStream(fileName));
+
+
+        for (String key : properties.stringPropertyNames()) {
+            if (key.endsWith(".name")) {
+                String name = properties.getProperty(key);;
+                int age = Integer.valueOf(properties.getProperty(name + ".age"));
+                String hometown = properties.getProperty(name + ".hometown");
+                students.add(new Student(name, age, hometown));
+            }
+        }
+        return students;
     }
 
 

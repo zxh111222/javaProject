@@ -11,7 +11,31 @@ public class Student {
     int age;
     String hometown;
 
-    public Student(String hometown, int age, String name) {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getHometown() {
+        return hometown;
+    }
+
+    public void setHometown(String hometown) {
+        this.hometown = hometown;
+    }
+
+    public Student(String name, int age, String hometown) {
         this.hometown = hometown;
         this.age = age;
         this.name = name;
