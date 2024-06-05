@@ -109,14 +109,12 @@ public class StudentManagementSystem {
             return students;
         }
 
-
         properties.load(new FileInputStream(fileName));
-
 
         for (String key : properties.stringPropertyNames()) {
             if (key.endsWith(".name")) {
                 String name = properties.getProperty(key);;
-                int age = Integer.valueOf(properties.getProperty(name + ".age"));
+                int age = Integer.parseInt(properties.getProperty(name + ".age"));
                 String hometown = properties.getProperty(name + ".hometown");
                 students.add(new Student(name, age, hometown));
             }
