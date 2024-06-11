@@ -29,7 +29,7 @@ public class EmailNotificator implements Notificator {
         int toIndex = to.indexOf(".");
         String sender = from.substring(fromIndex + 1);
         String receiver = to.substring(toIndex + 1);
-        System.out.println(sender+"-"+receiver);
+        //System.out.println(sender + " -> " + receiver);
         // 获取信息并发送到控制台
         StringBuilder content = new StringBuilder();
         for (String info : information) {
@@ -39,7 +39,9 @@ public class EmailNotificator implements Notificator {
             for (String key : keyword) {
                 if (title.contains(key)) {
                     keywordCount++;
-                    content.append("获取到第").append(keywordCount).append("个所需的关键词内容，关键词为：“").append(key).append("”").append("\n其标题为:").append(title).append("\n其url为:").append(url).append("\n");
+                    content.append("获取到第").append(keywordCount).append("个所需的关键词内容，关键词为：“").append(key).append("”").append("<br/>");
+                    content.append("其标题为:").append(title).append("<br/>");
+                    content.append("其url为:").append(url).append("<br/><br/>");
                     /*System.out.println("获取到第" + keywordCount + "个所需的关键词内容，关键词为：“" + key + "”");
                     System.out.println("其标题为:" + title);
                     System.out.println("其url为:" + url);*/
