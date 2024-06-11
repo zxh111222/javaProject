@@ -16,7 +16,7 @@ import java.util.Properties;
 
 
 public class APP {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         // 读取配置文件
         Properties properties = new Properties();
         File file = new File("src/day20240607/phase_project/resources/config.properties");
@@ -48,8 +48,8 @@ public class APP {
         System.out.println("Notificator - 正在通知...");
         String keywords = properties.getProperty("keywords");
         Notificator notificator = getNotificator(properties.getProperty("notificator"));
-        notificator.send(information, keywords);
-        System.out.println("Notificator - 通知完成...0");
+        notificator.notificator(information, keywords, properties);
+        System.out.println("Notificator - 通知完成...");
 
         //结束
         System.out.println("程序运行结束!");
