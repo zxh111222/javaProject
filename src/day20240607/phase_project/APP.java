@@ -44,10 +44,39 @@ public class APP {
         Map<String, String> saveInfo =  storage.save(information);
         System.out.println("Storage - 存储完成...");
 
-
         // 通知模块: 根据配置文件的信息选择通知方式，配置文件含有通知的相关信息
+        System.out.println("Notificator - 正在通知...");
+        String keywords = properties.getProperty("keywords");
+        Notificator notificator = getNotificator(properties.getProperty("notificator"));
+        notificator.send(information, keywords);
+        System.out.println("Notificator - 通知完成...0");
+
+        //结束
+        System.out.println("程序运行结束!");
     }
 
+    /**
+     * @description: TODO
+     * @author XinhaoZheng
+     * @date 2024/6/11 8:52
+     * @version 1.0
+     */
+    private static Notificator getNotificator(String notificator) {
+        Notificator n = null;
+        if ("email".equals((notificator))) {
+            n =  new EmailNotificator();
+        } else if ("console".equals(notificator)) {
+            n = new ConsoleNotificator();
+        }
+        return n;
+    }
+
+    /**
+     * @description: TODO
+     * @author XinhaoZheng
+     * @date 2024/6/11 8:52
+     * @version 1.0
+     */
     private static Storage getStorage(String storage) {
         Storage s = null;
         if ("console".equals(storage)) {
