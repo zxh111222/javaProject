@@ -62,13 +62,7 @@ public class APP {
      * @version 1.0
      */
     private static Notificator getNotificator(String notificator) {
-        Notificator n = null;
-        if ("email".equals((notificator))) {
-            n =  new EmailNotificator();
-        } else if ("console".equals(notificator)) {
-            n = new ConsoleNotificator();
-        }
-        return n;
+        return MyReflectionUtil.getInstance(notificator);
     }
 
     /**
@@ -78,13 +72,7 @@ public class APP {
      * @version 1.0
      */
     private static Storage getStorage(String storage) {
-        Storage s = null;
-        if ("console".equals(storage)) {
-            s = new ConsoleStorage();
-        } else if ("file".equals(storage)) {
-            s = new FileStorage();
-        }
-        return s;
+        return MyReflectionUtil.getInstance(storage);
     }
 
     /**
@@ -94,11 +82,7 @@ public class APP {
      * @version 1.0
      */
     private static Parser getParser(String parser) {
-        Parser p = null;
-        if ("xmfish".equals(parser)) {
-            p = new XmfishParser();
-        }
-        return p;
+        return MyReflectionUtil.getInstance(parser);
     }
 
     /**
@@ -108,13 +92,7 @@ public class APP {
      * @version 1.0
      */
     private static Downloader getDownloader(String downloader) {
-        Downloader dl = null;
-        if ("jsoup".equals(downloader)) {
-            dl = new JsoupDownloader();
-        } else if ("io".equals(downloader)) {
-            dl = new MyIODownloader();
-        }
-        return dl;
+        return MyReflectionUtil.getInstance(downloader);
     }
 
 
