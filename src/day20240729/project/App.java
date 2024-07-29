@@ -1,6 +1,11 @@
 package day20240729.project;
 
 
+import day20240729.project.downloader.DefaultDownloader;
+import day20240729.project.downloader.Downloader;
+import day20240729.project.parser.DefaultParser;
+import day20240729.project.parser.Parser;
+
 import java.util.List;
 
 /**
