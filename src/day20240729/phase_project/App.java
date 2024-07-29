@@ -58,9 +58,8 @@ public class App {
 
         // 通知模块: 根据配置文件的信息选择通知方式，配置文件含有通知的相关信息
         System.out.println("Notificator - 正在通知...");
-        String keywords = properties.getProperty("keywords");
         Notificator notificator = Notificator.getInstance(properties.getProperty("notificator"));
-        notificator.notify(information, keywords, properties);
+        notificator.notify(information, properties);
         System.out.println("Notificator - 通知完成...");
 
         //结束

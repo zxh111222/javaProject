@@ -15,9 +15,10 @@ import java.util.Properties;
  */
 public class EmailNotificator implements Notificator {
     @Override
-    public void notify(List<String> information, String keywords, Properties properties) throws Exception {
+    public void notify(List<String> information, Properties properties) throws Exception {
         // 处理、获取关键词
         int keywordCount = 0;
+        String keywords = properties.getProperty("keywords");
         String[] keyword = keywords.split(",");
         // 提取配置文件相关信息
         String secret_token = properties.getProperty("secret_token");

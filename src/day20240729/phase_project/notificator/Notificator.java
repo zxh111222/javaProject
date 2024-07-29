@@ -11,5 +11,5 @@ public interface Notificator {
         return MyReflectionUtil.getInstance(notificator);
     }
 
-    void notify(List<String> information, String keywords, Properties properties) throws Exception;
+    void notify(List<String> information, Properties properties) throws Exception;
 }

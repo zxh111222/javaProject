@@ -12,9 +12,10 @@ import java.util.Properties;
  */
 public class ConsoleNotificator implements Notificator {
     @Override
-    public void notify(List<String> information, String keywords, Properties properties) {
+    public void notify(List<String> information, Properties properties) {
         // 处理、获取关键词
         int keywordCount = 0;
+        String keywords = properties.getProperty("keywords");
         String[] keyword = keywords.split(",");
         // 获取信息并发送到控制台
         for (String info : information) {
