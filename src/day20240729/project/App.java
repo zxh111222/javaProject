@@ -21,9 +21,11 @@ public class App {
 
 
         // 解析模块 Parser :
+        System.out.println("Parser - 正在解析...");
         Parser parser = new DefaultParser();
         List<String> result = parser.parse(html);
         System.out.println(result);
+        System.out.println("Parser - 解析完成");
 
 
         // 存储模块 Storage :
