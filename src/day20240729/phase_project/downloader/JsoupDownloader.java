@@ -1,6 +1,5 @@
-package day20240729.phase_project.Downloader;
+package day20240729.phase_project.downloader;
 
-import day20240607.phase_project.Downloader.Downloader;
 import org.jsoup.Jsoup;
 
 import java.io.IOException;
@@ -18,7 +17,7 @@ public class JsoupDownloader implements Downloader {
     }
 
     @Override
-    public String downloader(String url) {
+    public String download(String url) {
         String html = null;
         try {
             html = Jsoup.connect(url).get().html();

@@ -1,6 +1,5 @@
-package day20240729.phase_project.Parser;
+package day20240729.phase_project.parser;
 
-import day20240607.phase_project.Parser.Parser;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -17,7 +16,7 @@ import java.util.List;
  */
 public class XmfishParser implements Parser {
     @Override
-    public List<String> parser(String html) {
+    public List<String> parse(String html) {
         List<String> parserList = new ArrayList<>();
         Document doc = Jsoup.parse(html);
         Elements es = doc.select("tbody[id=threadlist]").select("tr[class=tr3]");

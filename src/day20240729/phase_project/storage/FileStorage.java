@@ -1,6 +1,5 @@
-package day20240729.phase_project.Storage;
+package day20240729.phase_project.storage;
 
-import day20240607.phase_project.Storage.Storage;
 
 import java.io.*;
 import java.util.*;
@@ -16,7 +15,7 @@ public class FileStorage implements Storage {
     public Map<String, String> save(List<String> information) throws IOException {
         Map<String, String> map = new LinkedHashMap<>();
         Properties properties = new Properties();
-        File file = new File("src/day20240607/phase_project/resources/storeInfo.properties");
+        File file = new File("src/day20240729/phase_project/resources/storeInfo.properties");
         try (FileInputStream fis = new FileInputStream(file)){
             properties.load(fis);
         }

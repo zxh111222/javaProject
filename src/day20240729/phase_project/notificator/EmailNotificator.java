@@ -1,6 +1,6 @@
-package day20240729.phase_project.Notificator;
+package day20240729.phase_project.notificator;
 
-import day20240607.phase_project.Notificator.Notificator;
+
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeBodyPart;
@@ -18,7 +18,7 @@ import java.util.Properties;
  */
 public class EmailNotificator implements Notificator {
     @Override
-    public void notificator(List<String> information, String keywords, Properties properties) throws Exception {
+    public void notify(List<String> information, String keywords, Properties properties) throws Exception {
         // 处理、获取关键词
         int keywordCount = 0;
         String[] keyword = keywords.split(",");
