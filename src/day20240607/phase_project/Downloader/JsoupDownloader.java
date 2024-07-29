@@ -1,4 +1,4 @@
-package day20240607.phase_project;
+package day20240607.phase_project.Downloader;
 
 import org.jsoup.Jsoup;
 
@@ -10,7 +10,7 @@ import java.io.IOException;
  * @description: TODO
  * @date 2024/6/8 18:35
  */
-public class JsoupDownloader implements Downloader{
+public class JsoupDownloader implements Downloader {
 
     public JsoupDownloader() {
         System.out.println("JsoupDownloader.JsoupDownloader");

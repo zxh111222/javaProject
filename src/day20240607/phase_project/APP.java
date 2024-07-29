@@ -1,8 +1,13 @@
 package day20240607.phase_project;
 
+import day20240607.phase_project.Downloader.Downloader;
+import day20240607.phase_project.Notificator.Notificator;
+import day20240607.phase_project.Parser.Parser;
+import day20240607.phase_project.Storage.Storage;
+import day20240607.phase_project.Util.MyReflectionUtil;
+
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -19,10 +24,14 @@ public class APP {
     public static void main(String[] args) throws Exception {
         // 读取配置文件
         Properties properties = new Properties();
-        File file = new File("src/day20240607/phase_project/resources/config.properties");
+        File file = new File("src/day20240607/phase_project/resources/config_local.properties");
         properties.load(new FileInputStream(file));
         System.out.println("配置文件读取成功!");
         System.out.println("程序开始运行...");
+
+        // 开始项目
+        String app = properties.getProperty("app");
+        System.out.println("程序名称 : " + app);
 
         // 下载模块: 根据配置文件的信息进行不同方式的下载
         String url = properties.getProperty("url");

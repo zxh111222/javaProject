@@ -1,4 +1,4 @@
-package day20240607.phase_project;
+package day20240607.phase_project.Notificator;
 
 import java.util.List;
 import java.util.Properties;

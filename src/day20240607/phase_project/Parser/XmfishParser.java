@@ -1,4 +1,4 @@
-package day20240607.phase_project;
+package day20240607.phase_project.Parser;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -6,9 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author XinhaoZheng
