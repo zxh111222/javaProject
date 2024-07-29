@@ -7,6 +7,7 @@ import day20240729.project.parser.DefaultParser;
 import day20240729.project.parser.Parser;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author XinhaoZheng
@@ -34,6 +35,11 @@ public class App {
 
 
         // 存储模块 Storage :
+        Storage storage = new DefaultStorage();
+        Map<String, String> saveInfo = storage.save(result);
+        System.out.println(result);
+
+
 
 
         // 通知模块 Notificator :
