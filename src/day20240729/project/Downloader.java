@@ -7,5 +7,5 @@ package day20240729.project;
  * @date 2024/7/29 11:26
  */
 public abstract class Downloader {
-    public abstract String download(String html);
+    public abstract String download(String url);
 }

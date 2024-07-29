@@ -1,5 +1,8 @@
 package day20240729.project;
 
+
+import java.util.List;
+
 /**
  * @author XinhaoZheng
  * @version 1.0
@@ -17,8 +20,10 @@ public class App {
         System.out.println("Downloader - 下载完成");
 
 
-
         // 解析模块 Parser :
+        Parser parser = new DefaultParser();
+        List<String> result = parser.parse(html);
+        System.out.println(result);
 
 
         // 存储模块 Storage :
