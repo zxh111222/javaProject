@@ -3,8 +3,12 @@ package day20240729.project;
 
 import day20240729.project.downloader.DefaultDownloader;
 import day20240729.project.downloader.Downloader;
+import day20240729.project.notificator.DefaultNotificator;
+import day20240729.project.notificator.Notificator;
 import day20240729.project.parser.DefaultParser;
 import day20240729.project.parser.Parser;
+import day20240729.project.storage.DefaultStorage;
+import day20240729.project.storage.Storage;
 
 import java.util.List;
 import java.util.Map;
@@ -35,14 +39,18 @@ public class App {
 
 
         // 存储模块 Storage :
+        System.out.println("Storage - 正在存储...");
         Storage storage = new DefaultStorage();
         Map<String, String> saveInfo = storage.save(result);
         System.out.println(saveInfo);
+        System.out.println("Storage - 存储完成...");
 
 
         // 通知模块 Notificator :
+        System.out.println("Notificator - 正在通知...");
         Notificator notificator = new DefaultNotificator();
         notificator.notify(result);
+        System.out.println("Notificator - 通知完成...");
 
 
 
