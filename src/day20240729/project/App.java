@@ -37,14 +37,12 @@ public class App {
         // 存储模块 Storage :
         Storage storage = new DefaultStorage();
         Map<String, String> saveInfo = storage.save(result);
-        System.out.println(result);
-
-
+        System.out.println(saveInfo);
 
 
         // 通知模块 Notificator :
-
-
+        Notificator notificator = new DefaultNotificator();
+        notificator.notify(result);
 
 
 
