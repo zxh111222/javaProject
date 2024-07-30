@@ -19,9 +19,21 @@ public class CustomTypeTest {
         System.out.println("=== === ===");
 
         System.out.println(CustomType.valueOf("JAVA"));
-        System.out.println(CustomType.valueOf("java"));
+//        System.out.println(CustomType.valueOf("java"));
 
         System.out.println("=== === ===");
+
+        CustomType type = values[1];
+
+        switch (type) {
+            case JAVA:
+                System.out.println("java");
+                break;
+            case PYTHON:
+                System.out.println("python");
+                break;
+        }
+
 
     }
 }
