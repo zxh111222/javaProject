@@ -15,7 +15,13 @@ public class CustomTypeTest {
         for (CustomType value : values) {
             System.out.println(value);
         }
+
+        System.out.println("=== === ===");
+
+        System.out.println(CustomType.valueOf("JAVA"));
+        System.out.println(CustomType.valueOf("java"));
+
+        System.out.println("=== === ===");
+
     }
-
-
 }
