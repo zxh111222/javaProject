@@ -1,6 +1,7 @@
 package day20240729.phase_project;
 
 import day20240729.phase_project.downloader.Downloader;
+import day20240729.phase_project.dto.CustomResult;
 import day20240729.phase_project.notificator.Notificator;
 import day20240729.phase_project.parser.Parser;
 import day20240729.phase_project.storage.Storage;
@@ -52,14 +53,14 @@ public class App {
         // 解析模块: 根据配置文件的信息进行不同 url 的解析
         System.out.println("Parser - 正在解析...");
         Parser parser = Parser.getInstance(PROPERTIES.getProperty("parser"));
-        List<String> information = parser.parse(html);
+        List<CustomResult> information = parser.parse(html);
         System.out.println("Parser - 解析完成！(共获取到" + information.size() + "条数据)");
         // System.out.println(information);
 
         // 存储模块: 根据配置文件的信息进行不同方式的存储
         System.out.println("Storage - 正在存储...");
         Storage storage = Storage.getInstance(PROPERTIES.getProperty("storage"));
-        Map<String, String> saveInfo =  storage.save(information);
+        storage.save(information);
         System.out.println("Storage - 存储完成...");
 
         // 通知模块: 根据配置文件的信息选择通知方式，配置文件含有通知的相关信息

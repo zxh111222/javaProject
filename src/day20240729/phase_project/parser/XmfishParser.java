@@ -1,5 +1,6 @@
 package day20240729.phase_project.parser;
 
+import day20240729.phase_project.dto.CustomResult;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,8 +17,8 @@ import java.util.List;
  */
 public class XmfishParser implements Parser {
     @Override
-    public List<String> parse(String html) {
-        List<String> parserList = new ArrayList<>();
+    public List<CustomResult> parse(String html) {
+        List<CustomResult> parserList = new ArrayList<>();
         Document doc = Jsoup.parse(html);
         Elements es = doc.select("tbody[id=threadlist]").select("tr[class=tr3]");
 
@@ -32,7 +33,9 @@ public class XmfishParser implements Parser {
             String title = titleElement.text();
             String url = titleElement.attr("href");
             url = "http://bbs.xmfish.com/" + url;
-            parserList.add(title + "," + url);
+            String createdAt = e.select("td.author").first().select("p").text();
+            String updatedAt = e.select("td.author").eq(1).select("p > a").attr("title");
+            parserList.add(new CustomResult(title, url, createdAt, updatedAt));
         }
 
         return parserList;
