@@ -8,5 +8,15 @@ package day20240730.enum_demo2;
  */
 public enum CustomType {
     JAVA,
-    PYTHON
+    PYTHON;
+
+    String desc;
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 }
