@@ -6,6 +6,8 @@ import day20240729.phase_project.util.MyEmailUtil;
 import java.util.List;
 import java.util.Properties;
 
+import static day20240729.phase_project.App.PROPERTIES;
+
 
 /**
  * @author XinhaoZheng
@@ -15,15 +17,15 @@ import java.util.Properties;
  */
 public class EmailNotificator implements Notificator {
     @Override
-    public void notify(List<String> information, Properties properties) throws Exception {
+    public void notify(List<String> information) throws Exception {
         // 处理、获取关键词
         int keywordCount = 0;
-        String keywords = properties.getProperty("keywords");
+        String keywords = PROPERTIES.getProperty("keywords");
         String[] keyword = keywords.split(",");
         // 提取配置文件相关信息
-        String secret_token = properties.getProperty("secret_token");
-        String from = properties.getProperty("from");
-        String to = properties.getProperty("to");
+        String secret_token = PROPERTIES.getProperty("secret_token");
+        String from = PROPERTIES.getProperty("from");
+        String to = PROPERTIES.getProperty("to");
         int fromIndex = from.indexOf(".");
         int toIndex = to.indexOf(".");
         String sender = from.substring(fromIndex + 1);

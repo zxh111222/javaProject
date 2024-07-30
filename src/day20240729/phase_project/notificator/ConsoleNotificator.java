@@ -4,6 +4,8 @@ package day20240729.phase_project.notificator;
 import java.util.List;
 import java.util.Properties;
 
+import static day20240729.phase_project.App.PROPERTIES;
+
 /**
  * @author XinhaoZheng
  * @version 1.0
@@ -12,10 +14,10 @@ import java.util.Properties;
  */
 public class ConsoleNotificator implements Notificator {
     @Override
-    public void notify(List<String> information, Properties properties) {
+    public void notify(List<String> information) {
         // 处理、获取关键词
         int keywordCount = 0;
-        String keywords = properties.getProperty("keywords");
+        String keywords = PROPERTIES.getProperty("keywords");
         String[] keyword = keywords.split(",");
         // 获取信息并发送到控制台
         for (String info : information) {
