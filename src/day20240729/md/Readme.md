@@ -9,5 +9,5 @@
 ![img5.png](img%2Fimg5.png)
 ![img2.png](img%2Fimg2.png)
 ![img3.png](img%2Fimg3.png)
-### properties 防止中文乱码
+### IDEA properties 防止中文乱码设置
 ![img6.png](img%2Fimg6.png)
