@@ -1,6 +1,8 @@
 package day20240729.phase_project.notificator;
 
 
+import day20240729.phase_project.dto.CustomResult;
+
 import java.util.List;
 import java.util.Properties;
 
@@ -14,25 +16,20 @@ import static day20240729.phase_project.App.PROPERTIES;
  */
 public class ConsoleNotificator implements Notificator {
     @Override
-    public void notify(List<String> information) {
-        // 处理、获取关键词
-        int keywordCount = 0;
-        String keywords = PROPERTIES.getProperty("keywords");
-        String[] keyword = keywords.split(",");
+    public void notify(List<CustomResult> information) {
         // 获取信息并发送到控制台
-        for (String info : information) {
-            int index = info.lastIndexOf(",");
-            String title = info.substring(0, index-1);
-            String url = info.substring(index + 1);
-            for (String key : keyword) {
-                if (title.contains(key)) {
-                    keywordCount++;
-                    System.out.println("获取到第" + keywordCount + "个所需的关键词内容，关键词为：“" + key + "”");
-                    System.out.println("其标题为:" + title);
-                    System.out.println("其url为:" + url);
-                }
-            }
+        String msg = Notificator.getMsgFromResult(information);
+        if (!msg.isBlank()) {
+            String to = PROPERTIES.getProperty("to");
+            System.out.println("--- --- ---");
+            System.out.println("Hi, " + to);
+            System.out.println();
+            System.out.println(msg);
+            System.out.println("--- --- ---");
+            System.out.println("发送完毕!");
+        } else {
+            System.out.println("没有命中任何关键词，无需发送通知");
         }
-        System.out.println("发送完毕!");
+
     }
 }

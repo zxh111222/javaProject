@@ -1,6 +1,8 @@
 package day20240729.phase_project.storage;
 
 
+import day20240729.phase_project.dto.CustomResult;
+
 import java.io.*;
 import java.util.*;
 
@@ -12,22 +14,19 @@ import java.util.*;
  */
 public class FileStorage implements Storage {
     @Override
-    public Map<String, String> save(List<String> information) throws IOException {
-        Map<String, String> map = new LinkedHashMap<>();
-        Properties properties = new Properties();
+    public void save(List<CustomResult> information) throws IOException {
         File file = new File("src/day20240729/phase_project/resources/storeInfo.properties");
-        try (FileInputStream fis = new FileInputStream(file)){
-            properties.load(fis);
+        try {
+            PrintWriter pw = new PrintWriter(new FileWriter(file));
+            for (CustomResult cr : information) {
+                pw.println(cr.getTitle());
+                pw.println(cr.getUrl());
+                pw.println(cr.getCreatedAt());
+                pw.println(cr.getUpdatedAt());
+                pw.println("--- --- ---");
+            }
+        } catch (IOException e){
+            throw new RuntimeException(e);
         }
-        for (int i = 0; i < information.size(); i++) {
-            String key = "info_" + (i + 1);
-            String value = information.get(i);
-            map.put(key, value);
-            properties.setProperty(key, value);
-        }
-        try (FileOutputStream fos = new FileOutputStream(file)){
-            properties.store(fos, properties.toString());
-        }
-        return map;
     }
 }

@@ -1,6 +1,8 @@
 package day20240729.phase_project.storage;
 
 
+import day20240729.phase_project.dto.CustomResult;
+
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,15 +15,13 @@ import java.util.Map;
  */
 public class ConsoleStorage implements Storage {
     @Override
-    public Map<String, String> save(List<String> information) {
-        Map<String, String> map = new LinkedHashMap<>();
-        for (int i = 0; i < information.size(); i++) {
-            String key = "info_" + (i + 1);
-            String value = information.get(i);
-            map.put(key, value);
-            // System.out.println(key + " : " + value);
+    public void save(List<CustomResult> information) {
+        for (CustomResult cr : information) {
+            System.out.println(cr.getTitle());
+            System.out.println(cr.getUrl());
+            System.out.println(cr.getCreatedAt());
+            System.out.println(cr.getUpdatedAt());
+            System.out.println("--- --- ---");
         }
-        System.out.println(map);
-        return map;
     }
 }
