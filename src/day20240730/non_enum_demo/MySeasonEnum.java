@@ -33,9 +33,7 @@ public class MySeasonEnum {
 
     @Override
     public String toString() {
-        return "MySeasonEnum{" +
-                "name='" + name + '\'' +
-                ", characteristic='" + characteristic + '\'' +
-                '}';
+        return "Season='" + name + '\'' +
+                ", characteristic='" + characteristic + '\'';
     }
 }
