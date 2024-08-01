@@ -34,7 +34,7 @@
 ![img3.png](img%2Fimg3.png)
 ![img6.png](img%2Fimg6.png)
 
-### 再次感受单线程执行方式  
+### 再次感受多条执行路径  
 ![img_3.png](img%2Fimg_3.png)
 
 ## synchronized 关键字  
