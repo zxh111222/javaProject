@@ -11,7 +11,9 @@ public class DayTest {
         System.out.println(Day.THURSDAY);
 
 
-        Day.FRIDAY.desc();
+        for (Day day : Day.values()){
+            day.desc();
+        }
 
 
     }
