@@ -13,7 +13,7 @@ public class Student {
         System.out.println("----");
     }
 
-    public static Student getInstance() {
+    public synchronized static Student getInstance() {
         if (instance == null) {
             instance = new Student();
         }
