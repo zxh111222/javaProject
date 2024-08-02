@@ -12,8 +12,8 @@ public class ThreadCommonMethod {
         // sleep();
         // join();
         // testYield();
-        testPriority();
-        // isAlive();
+        // testPriority();
+        isAlive();
     }
 
     private static void sleep() throws InterruptedException {
@@ -68,7 +68,24 @@ public class ThreadCommonMethod {
         }
     }
 
+    private static void isAlive() {
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                //System.out.println(Thread.currentThread().getName() + "---" + i);
+            }
+        });
+        System.out.println(t1.isAlive());
+        t1.start();
+        System.out.println(t1.isAlive());
 
+        System.out.println("等待一秒钟");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(t1.isAlive());
+    }
 
 
 
