@@ -14,6 +14,16 @@ public class ThreadNewPath {
         Thread myThread2 = new Thread(new MyThread2(), "Thread-path2");
         myThread2.start();
 
+        // 匿名的 Runnable 实现类
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 20; i++) {
+                    System.out.println(Thread.currentThread().getName() + "===" + i);
+                }
+            }
+        }).start();
+
 
     }
 }
