@@ -11,7 +11,7 @@ public class ThreadNewPath {
         MyThread1 myThread1 = new MyThread1();
         myThread1.start();
 
-
+        new Thread(new MyThread2()).start();
     }
 }
 
@@ -24,4 +24,12 @@ class MyThread1 extends Thread {
         }
     }
 
+class MyThread2 implements  Runnable {
 
+    @Override
+    public void run() {
+        for (int i = 0; i < 20; i++) {
+            System.out.println(Thread.currentThread().getName() + "===" + i);
+        }
+    }
+}
