@@ -9,8 +9,8 @@ package day20240802.thread_demo;
  */
 public class ThreadCommonMethod {
     public static void main(String[] args) throws InterruptedException {
-        sleep();
-        // join();
+        // sleep();
+        join();
         // testYield();
         // testPriority();
         // isAlive();
@@ -22,6 +22,24 @@ public class ThreadCommonMethod {
         System.out.println("2");
     }
 
+    private static void join() {
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                System.out.println(Thread.currentThread().getName() + "---" + i);
+            }
+        });
+        t1.start();
+
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println(Thread.currentThread().getName() + "---" + i);
+        }
+    }
 
 
 
