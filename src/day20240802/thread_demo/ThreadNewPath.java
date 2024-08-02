@@ -9,7 +9,7 @@ package day20240802.thread_demo;
 public class ThreadNewPath {
     public static void main(String[] args) {
         MyThread1 myThread1 = new MyThread1("Thread-path1");
-        myThread1.run();
+        myThread1.start();
 
         Thread myThread2 = new Thread(new MyThread2(), "Thread-path2");
         myThread2.start();
