@@ -24,7 +24,12 @@ public class ThreadNewPath {
             }
         }).start();
 
-
+        // lambda 表达式
+        new Thread(() -> {
+            for (int i = 0; i < 20; i++) {
+                    System.out.println(Thread.currentThread().getName() + "===" + i);
+                }
+        }).start();
     }
 }
 
