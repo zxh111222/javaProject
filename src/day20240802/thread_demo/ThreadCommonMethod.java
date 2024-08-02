@@ -13,7 +13,7 @@ public class ThreadCommonMethod {
         // join();
         // testYield();
         // testPriority();
-        isAlive();
+        // isAlive();
     }
 
     private static void sleep() throws InterruptedException {
