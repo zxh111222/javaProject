@@ -10,9 +10,10 @@ import java.util.*;
  */
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class TicketWindows {
-    static List<String> tickets = new Vector<>();
+    static Queue<String> tickets = new ConcurrentLinkedQueue<>();
 
     static {
         for (int i = 0; i < 10000; i++) {
@@ -25,14 +26,13 @@ public class TicketWindows {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    synchronized (tickets) {
-                        while (!tickets.isEmpty()) {
-                            try {
-                                Thread.sleep(1);
-                            } catch (InterruptedException e) {
-                                throw new RuntimeException(e);
-                            }
-                            System.out.println("售出===" + tickets.remove(0));
+                    while (true) {
+                        String s = tickets.poll();
+                        if (s == null) {
+                            break;
+                        }
+                        else {
+                            System.out.println("售出===" + s);
                         }
                     }
                 }
