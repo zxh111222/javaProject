@@ -26,23 +26,11 @@ public class TicketWindows {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    while (true) {
-                        String ticket = sellTicket();
-                        if (ticket == null) {
-                            break;
-                        }
-                        System.out.println("售出===" + ticket);
+                    while (!tickets.isEmpty()) {
+                        System.out.println("售出===" + tickets.remove(0));
                     }
                 }
             }).start();
-        }
-    }
-
-    private static synchronized String sellTicket() {
-        if (tickets.isEmpty()) {
-            return null;
-        } else {
-            return tickets.remove(0);
         }
     }
 }
