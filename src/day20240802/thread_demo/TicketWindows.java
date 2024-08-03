@@ -1,7 +1,6 @@
 package day20240802.thread_demo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author XinhaoZheng
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TicketWindows {
-    static List<String> tickets = new ArrayList<>();
+    static List<String> tickets = new Vector<>();
 
     static {
         for (int i = 0; i < 10000; i++) {
