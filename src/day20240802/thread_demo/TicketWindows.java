@@ -25,13 +25,15 @@ public class TicketWindows {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    while (!tickets.isEmpty()) {
-                        try {
-                            Thread.sleep(1);
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
+                    synchronized (tickets) {
+                        while (!tickets.isEmpty()) {
+                            try {
+                                Thread.sleep(1);
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+                            System.out.println("售出===" + tickets.remove(0));
                         }
-                        System.out.println("售出===" + tickets.remove(0));
                     }
                 }
             }).start();
